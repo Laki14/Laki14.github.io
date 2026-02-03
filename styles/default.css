@@ -5,9 +5,9 @@
 
 /* 1. Body - background color, font family, text color */
 body {
-    background-color: #f5f5f5;
+    background-color: #f4f1de;
+    color: #3d405b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -16,64 +16,63 @@ body {
 /* 2. Main content - max-width and centered margins */
 main {
     max-width: 900px;
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
-    border-radius: 8px;
 }
 
-/* 3. Header - background color, text color, padding */
+/* 3. Header - distinct background, padding, contrast */
 header {
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 30px;
+    background-color: #3d405b;
+    color: #f4f1de;
+    padding: 20px;
     text-align: center;
 }
 
-/* 4. H1 - font size, font family, letter spacing */
+/* 4. H1 - stylized font for large headings */
 h1 {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5em;
-    letter-spacing: 2px;
     margin: 0;
+    letter-spacing: 2px;
 }
 
-/* 5. H2 - color, border bottom, padding */
+/* 5. H2 - accent color, bottom border for visual separation */
 h2 {
-    color: #2c3e50;
-    border-bottom: 3px solid #3498db;
+    color: #e07a5f;
+    border-bottom: 3px solid #e07a5f;
     padding-bottom: 10px;
 }
 
-/* 6. Links - color, hover effect */
+/* 6. Links - accent color with hover effect */
 a {
-    color: #3498db;
+    color: #81b29a;
     text-decoration: none;
 }
 
 a:hover {
-    color: #2980b9;
+    color: #3d405b;
     text-decoration: underline;
 }
 
-/* 7. Footer - background, padding, text alignment */
+/* 7. Footer - dark background, light text, padding */
 footer {
-    background-color: #2c3e50;
-    color: #ffffff;
+    background-color: #3d405b;
+    color: #f4f1de;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
 }
 
 footer a {
-    color: #3498db;
+    color: #f2cc8f;
 }
 
 footer a:hover {
-    color: #5dade2;
+    color: #ffffff;
 }
 
-/* Figure/image styling */
+/* Additional styles for figures/images */
 figure {
     text-align: center;
     margin: 20px 0;
@@ -81,7 +80,7 @@ figure {
 
 figcaption {
     font-style: italic;
-    color: #666666;
+    color: #81b29a;
     margin-top: 10px;
 }
 
