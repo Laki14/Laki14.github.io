@@ -1,0 +1,93 @@
+/* ===========================================
+   ITIS 3135 COURSE SITE STYLES - default.css
+   7+ DIFFERENT styles from personal homepage
+   =========================================== */
+
+/* 1. Body - dark navy background, light text, different font */
+body {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 2. Main - different max-width, dark card style, accent border */
+main {
+    max-width: 850px;
+    margin: 20px auto;
+    background-color: #16213e;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #e94560;
+}
+
+/* 3. Header - gradient background, centered, bottom border */
+header {
+    background: linear-gradient(135deg, #0f3460, #16213e);
+    color: #eaeaea;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 3px solid #e94560;
+    max-width: 850px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+}
+
+/* 4. H1 - monospace font, uppercase, different size */
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* 5. H2 - coral red accent, dashed underline */
+h2 {
+    color: #e94560;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 2px dashed #e94560;
+    padding-bottom: 10px;
+}
+
+/* 6. Links - cyan color, glow hover effect */
+a {
+    color: #00fff5;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #e94560;
+    text-shadow: 0 0 5px #e94560;
+}
+
+/* 7. Footer - dark background, rounded bottom, top border */
+footer {
+    background-color: #0f3460;
+    color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+    border-top: 2px solid #e94560;
+}
+
+/* Header nav styling */
+header nav {
+    margin-top: 15px;
+}
+
+header nav a {
+    color: #00fff5;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Paragraph spacing */
+p {
+    margin: 15px 0;
+}
