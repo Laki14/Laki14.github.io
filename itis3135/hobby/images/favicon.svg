@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#1b4332"/>
+  <circle cx="50" cy="50" r="45" fill="#2d6a4f"/>
+  <!-- Shuttlecock -->
+  <ellipse cx="50" cy="60" rx="8" ry="10" fill="#f0f0f0"/>
+  <path d="M42 60 L35 35 L40 40 L42 60" fill="#b7e4c7" stroke="#1b4332" stroke-width="0.5"/>
+  <path d="M45 58 L42 30 L47 37 L45 58" fill="#95d5b2" stroke="#1b4332" stroke-width="0.5"/>
+  <path d="M50 57 L50 25 L50 57" fill="#74c69d" stroke="#1b4332" stroke-width="0.5"/>
+  <path d="M55 58 L58 30 L53 37 L55 58" fill="#95d5b2" stroke="#1b4332" stroke-width="0.5"/>
+  <path d="M58 60 L65 35 L60 40 L58 60" fill="#b7e4c7" stroke="#1b4332" stroke-width="0.5"/>
+  <!-- Feathers -->
+  <path d="M35 35 Q30 28 35 22 Q40 28 40 35" fill="#40916c" stroke="#1b4332"/>
+  <path d="M42 30 Q40 20 45 15 Q48 22 47 30" fill="#52b788" stroke="#1b4332"/>
+  <path d="M50 25 Q50 12 55 10 Q55 18 55 25 L50 25" fill="#74c69d" stroke="#1b4332"/>
+  <path d="M58 30 Q60 20 55 15 Q52 22 53 30" fill="#52b788" stroke="#1b4332"/>
+  <path d="M65 35 Q70 28 65 22 Q60 28 60 35" fill="#40916c" stroke="#1b4332"/>
+</svg>

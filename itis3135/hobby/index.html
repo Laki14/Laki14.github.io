@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton - Laki's Hobby Page</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Embedded Stylesheet -->
+    <style>
+        /* ============================================
+           BADMINTON HOBBY PAGE - EMBEDDED STYLES
+           Color Scheme: Blue & Green (from photos)
+           ============================================ */
+        
+        /* 1. Body - Dark blue-green background */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 50%, #144d3e 100%);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        
+        /* 2. Header - Green accent */
+        header {
+            background: linear-gradient(90deg, #1b4332, #2d6a4f);
+            padding: 20px 40px;
+            text-align: center;
+            border-bottom: 4px solid #40916c;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.5em;
+            color: #b7e4c7;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 15px;
+        }
+        
+        /* 3. Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        nav a {
+            color: #95d5b2;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: #40916c;
+            color: #ffffff;
+        }
+        
+        .divider {
+            color: #74c69d;
+            padding: 8px 5px;
+        }
+        
+        /* 4. Main content */
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        /* 5. Sections */
+        section {
+            display: none;
+            background: rgba(27, 67, 50, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 2px solid #2d6a4f;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        section h2 {
+            color: #74c69d;
+            font-size: 2em;
+            border-bottom: 3px solid #40916c;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        /* 6. Paragraphs */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* 7. Figures */
+        figure {
+            text-align: center;
+            margin: 25px 0;
+            background: rgba(13, 27, 42, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #2d6a4f;
+        }
+        
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+        
+        figcaption {
+            color: #95d5b2;
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+        
+        .ai-prompt {
+            font-style: italic;
+            color: #b7e4c7;
+            font-size: 0.85em;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(64, 145, 108, 0.2);
+            border-radius: 5px;
+        }
+        
+        /* 8. Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(13, 27, 42, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #2d6a4f;
+        }
+        
+        th {
+            background: #1b4332;
+            color: #b7e4c7;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background: rgba(45, 106, 79, 0.3);
+        }
+        
+        /* 9. Lists */
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        /* 10. Footer */
+        footer {
+            background: linear-gradient(90deg, #1b4332, #0d1b2a);
+            padding: 25px;
+            text-align: center;
+            border-top: 4px solid #40916c;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #74c69d;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: #b7e4c7;
+            text-decoration: underline;
+        }
+        
+        .validation-links {
+            margin-top: 15px;
+        }
+        
+        .validation-links a {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #2d6a4f;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        
+        .validation-links a:hover {
+            background: #40916c;
+        }
+        
+        /* Form styling */
+        form {
+            background: rgba(13, 27, 42, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #95d5b2;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #2d6a4f;
+            border-radius: 5px;
+            background: #0d1b2a;
+            color: #e0e0e0;
+        }
+        
+        button {
+            background: #2d6a4f;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #40916c;
+        }
+        
+        /* Code/prompt blocks */
+        pre, code {
+            background: rgba(13, 27, 42, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #95d5b2;
+            display: block;
+            margin: 15px 0;
+            border: 1px solid #2d6a4f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🏸 Badminton 🏸</h1>
+        <nav>
+            <a href="#what" onclick="showSection('what')" class="active">What</a>
+            <span class="divider">🏸</span>
+            <a href="#who" onclick="showSection('who')">Who</a>
+            <span class="divider">🏸</span>
+            <a href="#when" onclick="showSection('when')">When</a>
+            <span class="divider">🏸</span>
+            <a href="#where" onclick="showSection('where')">Where</a>
+            <span class="divider">🏸</span>
+            <a href="#how" onclick="showSection('how')">How</a>
+            <span class="divider">🏸</span>
+            <a href="#why" onclick="showSection('why')">Why</a>
+            <span class="divider">🏸</span>
+            <a href="#ai-prompts" onclick="showSection('ai-prompts')">AI Prompts</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- WHAT Section (Home - Default) -->
+        <section id="what" class="active">
+            <h2>What is Badminton?</h2>
+            
+            <p>Badminton is a racquet sport played using lightweight rackets to hit a shuttlecock across a net. It can be played as singles (one player per side) or doubles (two players per side). The game originated in British India and became an Olympic sport in 1992. It is one of the fastest racquet sports in the world, with shuttlecocks reaching speeds over 300 mph during professional matches!</p>
+            
+            <figure>
+                <img src="images/badminton-racket.jpg" alt="Badminton racket and shuttlecocks on grass">
+                <figcaption>A badminton racket with feather shuttlecocks - the essential equipment for the sport</figcaption>
+                <p class="ai-prompt"><em>Image source: Open source photograph of badminton equipment on grass court</em></p>
+            </figure>
+            
+            <p>The objective is simple: hit the shuttlecock over the net and land it within the opponent's court boundaries. A rally ends when the shuttlecock touches the ground, goes into the net, or lands outside the court. Points are scored by winning rallies, and matches are typically played as best of three games to 21 points.</p>
+            
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Court Size</td>
+                    <td>13.4m x 6.1m (doubles) / 13.4m x 5.18m (singles)</td>
+                </tr>
+                <tr>
+                    <td>Net Height</td>
+                    <td>1.55m at edges, 1.524m at center</td>
+                </tr>
+                <tr>
+                    <td>Shuttlecock Speed</td>
+                    <td>Up to 493 km/h (world record)</td>
+                </tr>
+                <tr>
+                    <td>Olympic Sport Since</td>
+                    <td>1992 Barcelona Olympics</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- WHO Section -->
+        <section id="who">
+            <h2>Who Plays Badminton?</h2>
+            
+            <p>Badminton is enjoyed by over 220 million people worldwide, making it one of the most popular sports globally. It's particularly dominant in Asian countries like China, Indonesia, Malaysia, India, Japan, and South Korea. The sport is accessible to all ages and skill levels, from casual backyard games to intense professional competitions.</p>
+            
+            <figure>
+                <img src="images/pv-sindhu.jpg" alt="Professional badminton player PV Sindhu in action">
+                <figcaption>PV Sindhu - One of the greatest badminton players from India, Olympic medalist</figcaption>
+                <p class="ai-prompt"><em>Image source: Sports photograph of professional badminton player during Olympic competition</em></p>
+            </figure>
+            
+            <p>Famous badminton players have become legends in the sport. Players like Lin Dan (China), Lee Chong Wei (Malaysia), PV Sindhu (India), and Carolina Marín (Spain) have inspired millions to pick up a racket. The sport requires exceptional reflexes, agility, and strategic thinking.</p>
+            
+            <ul>
+                <li><strong>Lin Dan (China)</strong> - Two-time Olympic gold medalist, considered by many as the greatest player ever</li>
+                <li><strong>PV Sindhu (India)</strong> - First Indian woman to win Olympic silver in badminton, World Champion</li>
+                <li><strong>Lee Chong Wei (Malaysia)</strong> - Three-time Olympic silver medalist, national hero</li>
+                <li><strong>Viktor Axelsen (Denmark)</strong> - Current Olympic champion, dominating men's singles</li>
+                <li><strong>Tai Tzu-ying (Taiwan)</strong> - Known for her deceptive playing style and incredible skills</li>
+            </ul>
+        </section>
+
+        <!-- WHEN Section -->
+        <section id="when">
+            <h2>When to Play Badminton?</h2>
+            
+            <p>Badminton is primarily an indoor sport at the competitive level because even slight wind can significantly affect the shuttlecock's trajectory. However, recreational players often enjoy outdoor games in calm weather. The best times to play depend on your goals and local climate conditions.</p>
+            
+            <figure>
+                <img src="images/badminton-court.jpg" alt="Indoor badminton court with proper lighting">
+                <figcaption>A professional indoor badminton court - where serious matches are played</figcaption>
+                <p class="ai-prompt"><em>AI Prompt: "Professional indoor badminton court with green flooring, proper court lines, net in center, bright overhead lighting, empty court ready for play, photorealistic style"</em></p>
+            </figure>
+            
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Best For</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Early Morning (6-8 AM)</td>
+                    <td>Serious training</td>
+                    <td>Cooler temperatures, fresh mind</td>
+                </tr>
+                <tr>
+                    <td>Evening (5-8 PM)</td>
+                    <td>Recreational play</td>
+                    <td>Most popular time, courts busy</td>
+                </tr>
+                <tr>
+                    <td>Weekends</td>
+                    <td>Tournaments, group sessions</td>
+                    <td>More time for longer matches</td>
+                </tr>
+                <tr>
+                    <td>Indoor (Year-round)</td>
+                    <td>Consistent practice</td>
+                    <td>No weather interruptions</td>
+                </tr>
+            </table>
+            
+            <p>Major badminton tournaments follow a yearly calendar. The BWF World Tour includes events like the All England Open (March), Indonesia Open (June), and the BWF World Championships (August). The Olympics feature badminton every four years during the Summer Games.</p>
+        </section>
+
+        <!-- WHERE Section -->
+        <section id="where">
+            <h2>Where to Play Badminton?</h2>
+            
+            <p>Badminton can be played in various settings, from professional indoor arenas to backyard setups. For serious play, indoor courts with proper flooring and lighting are essential. Here are some popular venues and locations for badminton enthusiasts.</p>
+            
+            <figure>
+                <img src="images/badminton-stadium.jpg" alt="Large badminton stadium during tournament">
+                <figcaption>Istora Senayan, Jakarta - One of the most iconic badminton stadiums in the world</figcaption>
+                <p class="ai-prompt"><em>AI Prompt: "Large indoor badminton stadium with multiple courts, spectator seating, professional lighting, tournament atmosphere, photorealistic, bird's eye view"</em></p>
+            </figure>
+            
+            <p><strong>Best Places to Play in Charlotte, NC:</strong></p>
+            <ul>
+                <li><strong>Charlotte Badminton Club</strong> - Dedicated facility with multiple courts and coaching</li>
+                <li><strong>UNC Charlotte Recreation Center</strong> - Campus facility with drop-in badminton sessions</li>
+                <li><strong>YMCA locations</strong> - Multiple courts available for members</li>
+                <li><strong>Local community centers</strong> - Affordable court rentals</li>
+                <li><strong>Parks (casual play)</strong> - Freedom Park, Reedy Creek Park for outdoor fun</li>
+            </ul>
+            
+            <p><strong>Top Badminton Destinations Worldwide:</strong></p>
+            <table>
+                <tr>
+                    <th>Country</th>
+                    <th>Famous Venue</th>
+                </tr>
+                <tr>
+                    <td>England</td>
+                    <td>Birmingham Arena (All England Open)</td>
+                </tr>
+                <tr>
+                    <td>Indonesia</td>
+                    <td>Istora Senayan, Jakarta</td>
+                </tr>
+                <tr>
+                    <td>China</td>
+                    <td>Tianhe Gymnasium, Guangzhou</td>
+                </tr>
+                <tr>
+                    <td>Malaysia</td>
+                    <td>Axiata Arena, Kuala Lumpur</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- HOW Section -->
+        <section id="how">
+            <h2>How to Play Badminton?</h2>
+            
+            <p>Learning badminton involves mastering several fundamental skills. Whether you're a beginner or looking to improve, understanding the basic techniques is crucial for enjoying the game and competing effectively.</p>
+            
+            <figure>
+                <img src="images/badminton-grip.jpg" alt="Proper badminton racket grip demonstration">
+                <figcaption>The correct forehand grip - essential for powerful and accurate shots</figcaption>
+                <p class="ai-prompt"><em>AI Prompt: "Close-up of hands holding badminton racket with proper forehand grip technique, instructional style, clear lighting, photorealistic"</em></p>
+            </figure>
+            
+            <p><strong>Basic Techniques:</strong></p>
+            <ol>
+                <li><strong>Grip:</strong> Hold the racket like shaking hands - firm but relaxed. The V between thumb and index finger should align with the racket edge.</li>
+                <li><strong>Serve:</strong> For beginners, use an underhand serve. Stand behind the service line, hold the shuttle by the feathers, and hit it below your waist.</li>
+                <li><strong>Clear:</strong> A high, deep shot to the back of the opponent's court. Use full arm extension and follow through.</li>
+                <li><strong>Drop Shot:</strong> A soft shot that barely clears the net. Use a gentle touch with minimal follow-through.</li>
+                <li><strong>Smash:</strong> The most powerful attacking shot. Jump and hit the shuttle at the highest point with maximum force.</li>
+            </ol>
+            
+            <p><strong>Rules Summary:</strong></p>
+            <ul>
+                <li>Games are played to 21 points (must win by 2, cap at 30)</li>
+                <li>Best of 3 games wins the match</li>
+                <li>You score a point whether serving or receiving</li>
+                <li>The shuttlecock must be hit below the waist on serve</li>
+                <li>Only one hit per side before sending over the net</li>
+            </ul>
+            
+            <form>
+                <h3>Sign Up for Beginner Lessons</h3>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                
+                <label for="level">Current Level:</label>
+                <select id="level" name="level">
+                    <option value="beginner">Complete Beginner</option>
+                    <option value="casual">Casual Player</option>
+                    <option value="intermediate">Intermediate</option>
+                </select>
+                
+                <button type="button" onclick="alert('Thanks for your interest! This is a demo form.')">Submit</button>
+            </form>
+        </section>
+
+        <!-- WHY Section -->
+        <section id="why">
+            <h2>Why Play Badminton?</h2>
+            
+            <p>Badminton offers incredible benefits for both physical and mental health. It's a fun way to stay active, socialize, and challenge yourself. Here's why millions of people around the world have fallen in love with this amazing sport.</p>
+            
+            <figure>
+                <img src="images/badminton-fitness.jpg" alt="Person playing badminton showing athletic movement">
+                <figcaption>Badminton provides an excellent full-body workout while being fun and engaging</figcaption>
+                <p class="ai-prompt"><em>AI Prompt: "Athletic person mid-jump during badminton smash, showing full body engagement, indoor court, dynamic action shot, photorealistic sports photography style"</em></p>
+            </figure>
+            
+            <p><strong>Health Benefits:</strong></p>
+            <ul>
+                <li><strong>Cardiovascular Fitness:</strong> Burns up to 450 calories per hour of play</li>
+                <li><strong>Agility & Reflexes:</strong> Constant movement improves reaction time</li>
+                <li><strong>Strength:</strong> Develops arm, leg, and core muscles</li>
+                <li><strong>Flexibility:</strong> Reaching for shots improves range of motion</li>
+                <li><strong>Mental Health:</strong> Reduces stress and improves mood through exercise</li>
+            </ul>
+            
+            <p><strong>Social Benefits:</strong></p>
+            <ul>
+                <li>Easy to find playing partners at clubs and recreation centers</li>
+                <li>Great for family activities - all ages can play together</li>
+                <li>Doubles play encourages teamwork and communication</li>
+                <li>Strong community of players worldwide</li>
+            </ul>
+            
+            <table>
+                <tr>
+                    <th>Benefit Category</th>
+                    <th>Impact</th>
+                </tr>
+                <tr>
+                    <td>Physical Fitness</td>
+                    <td>⭐⭐⭐⭐⭐ Excellent full-body workout</td>
+                </tr>
+                <tr>
+                    <td>Accessibility</td>
+                    <td>⭐⭐⭐⭐⭐ Easy to start, affordable equipment</td>
+                </tr>
+                <tr>
+                    <td>Social Aspect</td>
+                    <td>⭐⭐⭐⭐ Great for meeting people</td>
+                </tr>
+                <tr>
+                    <td>Mental Stimulation</td>
+                    <td>⭐⭐⭐⭐⭐ Strategic thinking required</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- AI PROMPTS Section -->
+        <section id="ai-prompts">
+            <h2>AI Prompts Used</h2>
+            
+            <p>This page was created with the assistance of AI tools. Below are the prompts and AI models used to generate content and images for this hobby website.</p>
+            
+            <h3>AI Model Used: GitHub Copilot / Claude</h3>
+            
+            <p><strong>Prompt 1 - Page Structure:</strong></p>
+            <pre><code>"Create a hobby website about badminton with sections for What, Who, When, Where, How, Why, and AI Prompts. Use embedded CSS with blue and green color scheme. Include JavaScript to show/hide sections. Each section needs h2 heading, at least 3 items (paragraphs, tables, figures), and one figure with image and caption."</code></pre>
+            
+            <p><strong>Prompt 2 - Styling:</strong></p>
+            <pre><code>"Use blue and green colors like badminton court colors. Make it follow CRAP design principles. No Times New Roman, no white background, no black text, no generic blue links. Use 🏸 emoji as navigation divider."</code></pre>
+            
+            <p><strong>Prompt 3 - Content:</strong></p>
+            <pre><code>"Write informative content about badminton including: history of the sport, famous players like PV Sindhu and Lin Dan, best times to play, where to play in Charlotte NC, basic techniques and rules, and health benefits of playing badminton."</code></pre>
+            
+            <p><strong>Prompt 4 - JavaScript:</strong></p>
+            <pre><code>"Write JavaScript to show only one section at a time when navigation links are clicked. The 'What' section should be visible by default. Update active class on navigation links."</code></pre>
+            
+            <h3>Image AI Prompts:</h3>
+            
+            <p><em>Note: Some images are open-source photographs. For AI-generated images, the following prompts were used:</em></p>
+            
+            <pre><code>Image 1 (Court): "Professional indoor badminton court with green flooring, proper court lines, net in center, bright overhead lighting, empty court ready for play, photorealistic style"
+
+Image 2 (Stadium): "Large indoor badminton stadium with multiple courts, spectator seating, professional lighting, tournament atmosphere, photorealistic, bird's eye view"
+
+Image 3 (Grip): "Close-up of hands holding badminton racket with proper forehand grip technique, instructional style, clear lighting, photorealistic"
+
+Image 4 (Fitness): "Athletic person mid-jump during badminton smash, showing full body engagement, indoor court, dynamic action shot, photorealistic sports photography style"</code></pre>
+            
+            <figure>
+                <img src="images/ai-generated-example.jpg" alt="AI generated badminton illustration">
+                <figcaption>Example of AI-generated badminton artwork</figcaption>
+                <p class="ai-prompt"><em>AI Prompt: "Digital illustration of badminton shuttlecock and racket in motion, dynamic composition, green and blue color scheme, modern sports art style"</em></p>
+            </figure>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed by <a href="https://laki14.github.io" target="_blank" rel="noopener">Laki's Designs</a></p>
+        
+        <div class="validation-links">
+            <a href="https://validator.w3.org/nu/?doc=https://webpages.charlotte.edu/lselvam/itis3135/hobby/" target="_blank" rel="noopener">Validate HTML</a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://webpages.charlotte.edu/lselvam/itis3135/hobby/" target="_blank" rel="noopener">Validate CSS</a>
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/lselvam/itis3135/hobby/" target="_blank" rel="noopener">Check Accessibility</a>
+        </div>
+        
+        <p>&copy; 2026 Laki Selvam | Badminton Hobby Page</p>
+    </footer>
+
+    <!-- JavaScript for Section Navigation -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav link
+            const clickedLink = document.querySelector(`nav a[href="#${sectionId}"]`);
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            }
+            
+            // Prevent default anchor behavior
+            return false;
+        }
+        
+        // Set 'What' section as default on page load
+        window.onload = function() {
+            showSection('what');
+        };
+    </script>
+
+</body>
+</html>
