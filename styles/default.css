@@ -66,6 +66,40 @@ footer a:hover {
     color: #ffffff;
 }
 
+/* Navigation styling */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #f2cc8f;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.secondary-nav a {
+    color: #81b29a;
+    font-weight: bold;
+}
+
+.secondary-nav a:hover {
+    color: #b7e4c7;
+}
+
 /* Additional styles for figures/images */
 figure {
     text-align: center;
