@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laki14's Lazy Leopard ~ ITIS 3135 | Technical Documentation</title>
+
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/documentation.css">
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <nav id="navbar">
+        <header>CSS Grid Docs</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Grid_Container">Grid Container</a>
+        <a class="nav-link" href="#Grid_Tracks">Grid Tracks</a>
+        <a class="nav-link" href="#Grid_Lines">Grid Lines</a>
+        <a class="nav-link" href="#The_Fr_Unit">The Fr Unit</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows.</p>
+            <p>Unlike Flexbox, which is largely 1-dimensional, Grid excels at aligning content in two dimensions simultaneously.</p>
+            <code>display: grid;</code>
+        </section>
+
+        <section class="main-section" id="Grid_Container">
+            <header>Grid Container</header>
+            <p>To get started you have to define a container element as a grid with the display property.</p>
+            <p>Common properties for containers include:</p>
+            <ul>
+                <li>grid-template-columns</li>
+                <li>grid-template-rows</li>
+                <li>grid-gap</li>
+                <li>justify-items</li>
+                <li>align-items</li>
+            </ul>
+            <code>.container { display: grid; }</code>
+        </section>
+
+        <section class="main-section" id="Grid_Tracks">
+            <header>Grid Tracks</header>
+            <p>Tracks are the space between any two lines on the grid. They are essentially the columns and rows of your layout.</p>
+            <p>You define tracks using the <code>grid-template-columns</code> and <code>grid-template-rows</code> properties.</p>
+            <p>Once you define your tracks, every child element can be placed with precision by referencing the numbered lines around those tracks.</p>
+            <code>grid-template-columns: 200px 1fr;</code>
+        </section>
+
+        <section class="main-section" id="Grid_Lines">
+            <header>Grid Lines</header>
+            <p>The dividing lines that make up the structure of the grid are called Grid Lines.</p>
+            <p>They can be vertical (column lines) or horizontal (row lines). You can refer to them by number to place items.</p>
+            <p>Named lines can also make the layout easier to read when you are building larger page systems with repeated placements.</p>
+            <code>grid-column-start: 1;</code>
+        </section>
+
+        <section class="main-section" id="The_Fr_Unit">
+            <header>The Fr Unit</header>
+            <p>The new <code>fr</code> unit represents a fraction of the free space in the grid container.</p>
+            <p>This allows you to set the size of tracks in a way that is flexible and responsive without using percentages.</p>
+            <ul>
+                <li>Use fr units to divide remaining space proportionally.</li>
+                <li>Combine fr with fixed sizes when one column must stay stable.</li>
+                <li>Pair fr units with minmax() for stronger responsive layouts.</li>
+            </ul>
+            <code>grid-template-columns: 1fr 1fr 1fr;</code>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

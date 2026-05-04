@@ -1,0 +1,172 @@
+/* Product Landing Page Styles */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0f3460;
+    border-bottom: 2px solid #e94560;
+    border-radius: 0;
+    margin: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+main {
+    max-width: none;
+    margin: 0 auto;
+    padding: 140px 20px 40px;
+    border-left: none;
+}
+
+#header-img {
+    height: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e94560;
+}
+
+#nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar .nav-link {
+    text-decoration: none;
+    color: #00fff5;
+    font-weight: bold;
+}
+
+#nav-bar .nav-link:hover {
+    color: #e94560;
+}
+
+#hero {
+    text-align: center;
+    padding: 40px 20px;
+    padding-top: 80px;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#email {
+    padding: 10px 15px;
+    border: 1px solid #0f3460;
+    border-radius: 5px;
+    background-color: #1a1a2e;
+    color: #eaeaea;
+    font-size: 1em;
+    min-width: 250px;
+}
+
+#submit {
+    padding: 10px 25px;
+    background-color: #e94560;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#submit:hover {
+    background-color: #ff6b6b;
+}
+
+#features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    max-width: 300px;
+    text-align: center;
+}
+
+#video-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#video-section iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+#pricing {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.price-box {
+    display: inline-block;
+    background-color: #16213e;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #e94560;
+    min-width: 180px;
+}
+
+.price-box h3 {
+    color: #e94560;
+}
+
+.price-box button {
+    padding: 10px 20px;
+    background-color: #e94560;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        padding-top: 180px;
+    }
+
+    #nav-bar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

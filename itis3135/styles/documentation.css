@@ -1,0 +1,93 @@
+/* Technical Documentation Page Styles */
+
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    border-right: 2px solid #e94560;
+    padding: 15px;
+    background-color: #0f3460;
+    z-index: 10;
+}
+
+#navbar header {
+    background: none;
+    border: none;
+    border-radius: 0;
+    margin: 0 0 15px;
+    max-width: none;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #e94560;
+}
+
+.nav-link {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #00fff5;
+    border-bottom: 1px solid #1a1a2e;
+}
+
+.nav-link:hover {
+    color: #e94560;
+}
+
+#main-doc {
+    max-width: none;
+    margin-left: 280px;
+    padding: 20px;
+    border-left: none;
+}
+
+.main-section header {
+    background: none;
+    border: none;
+    border-radius: 0;
+    margin: 25px 0 10px;
+    max-width: none;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e94560;
+}
+
+.main-section p,
+.main-section li {
+    max-width: 70ch;
+}
+
+code {
+    display: inline-block;
+    background-color: #0f3460;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #00fff5;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #e94560;
+    }
+
+    #main-doc {
+        margin-left: 0;
+    }
+}

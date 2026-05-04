@@ -23,8 +23,8 @@ main {
     border-left: 4px solid #e94560;
 }
 
-/* 3. Header - gradient background, centered, bottom border */
-header {
+/* 3. Shared site header - gradient background, centered, bottom border */
+.site-header {
     background: linear-gradient(135deg, #0f3460, #16213e);
     color: #eaeaea;
     padding: 25px;
@@ -77,14 +77,19 @@ footer {
 }
 
 /* Header nav styling */
-header nav {
+.site-header nav {
     margin-top: 15px;
 }
 
-header nav a {
+.site-header nav a {
     color: #00fff5;
     margin: 0 10px;
     font-weight: bold;
+}
+
+.secondary-nav {
+    margin-top: 10px;
+    font-size: 0.95em;
 }
 
 /* Paragraph spacing */

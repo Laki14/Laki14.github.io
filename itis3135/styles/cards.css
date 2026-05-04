@@ -1,0 +1,48 @@
+#playing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 220px;
+    border: 2px solid #222;
+    border-radius: 16px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #ffffff, #eef3f8);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    color: #222;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.middle {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 26px;
+}
+
+.right {
+    align-self: flex-end;
+    transform: rotate(180deg);
+}
+
+.heart-card,
+.diamond-card {
+    color: #c1121f;
+}
+
+.spade-card {
+    color: #1d3557;
+}
