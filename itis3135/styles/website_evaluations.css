@@ -1,0 +1,29 @@
+.evaluation-card {
+    margin-top: 24px;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 255, 245, 0.18);
+    background: linear-gradient(180deg, rgba(15, 52, 96, 0.95), rgba(10, 25, 47, 0.95));
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+}
+
+.evaluation-card h3 {
+    margin-top: 0;
+    color: #e94560;
+}
+
+.evaluation-card ul {
+    padding-left: 22px;
+}
+
+.evaluation-card li {
+    margin-bottom: 10px;
+}
+
+.good-site {
+    border-left: 4px solid #00fff5;
+}
+
+.bad-site {
+    border-left: 4px solid #ff7b54;
+}
